@@ -43,7 +43,7 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 Write-Host "Retrieving $(if ($CopilotOnly) { 'Copilot-generated ' })comments from PR #${env:PRID}..." -ForegroundColor DarkGray
 
-& "$scriptDir\Get-AzureDevOpsPRComments.ps1" `
+& "$scriptDir\Get-AzureDevOpsPR.ps1" `
     -Token ${env:AZUREDEVOPS_TOKEN} `
     -AuthType ${env:AZUREDEVOPS_AUTH_TYPE} `
     -Organization ${env:ORGANIZATION} `
